@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Instrument_Serif, Inter } from "next/font/google";
+import { SiteHeader } from "@/components/site-header";
 import "./globals.css";
 
 const inter = Inter({
@@ -31,7 +32,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${inter.variable} ${instrumentSerif.variable} h-full antialiased`}
     >
-      <body className="min-h-full">{children}</body>
+      <body className="min-h-full">
+        <SiteHeader />
+        {children}
+      </body>
     </html>
   );
 }
