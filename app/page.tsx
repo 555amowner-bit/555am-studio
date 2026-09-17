@@ -1,4 +1,5 @@
 import { AboutIntro } from "@/components/about-intro";
+import { FinalCta } from "@/components/final-cta";
 import { Hero } from "@/components/hero";
 import { HowWeWork } from "@/components/how-we-work";
 import { SelectedWork } from "@/components/selected-work";
@@ -12,6 +13,7 @@ export default function Home() {
       <HowWeWork />
       <ServicesPricing />
       <AboutIntro />
+      <FinalCta />
     </>
   );
 }
