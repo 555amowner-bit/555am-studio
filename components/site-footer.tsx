@@ -39,12 +39,12 @@ export function SiteFooter() {
               <ul className="space-y-3">
                 {exploreLinks.map((link) => (
                   <li key={link.href}>
-                    <a className="text-link" href={link.href}>
+                    <Link className="text-link" href={link.href}>
                       <span>{link.label}</span>
                       <span aria-hidden="true" className="button-arrow">
                         →
                       </span>
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -54,13 +54,13 @@ export function SiteFooter() {
           <div className="col-span-6 sm:col-span-3 lg:col-span-3">
             <p className="eyebrow">GET IN TOUCH</p>
 
-            <div className="mt-5 space-y-3">
-              <a className="text-link" href="/contact">
+            <div className="mt-5 flex flex-col items-start gap-3">
+              <Link className="text-link" href="/contact">
                 <span>Start a project</span>
                 <span aria-hidden="true" className="button-arrow">
                   →
                 </span>
-              </a>
+              </Link>
 
               <a
                 className="text-link"
