@@ -31,6 +31,21 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  openGraph: {
+    title: "5:55 AM | Independent Web Studio",
+    description:
+      "5:55 AM is an independent web studio designing and building thoughtful websites for local businesses.",
+    siteName: "5:55 AM",
+    type: "website",
+    locale: "en_US",
+    url: "https://555am-studio.vercel.app",
+  },
+  twitter: {
+    card: "summary",
+    title: "5:55 AM | Independent Web Studio",
+    description:
+      "5:55 AM is an independent web studio designing and building thoughtful websites for local businesses.",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
