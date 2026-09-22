@@ -19,12 +19,18 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://555am-studio.vercel.app"),
   title: {
     default: "5:55 AM | Independent Web Studio",
     template: "%s | 5:55 AM",
   },
   description:
-    "5:55 AM is an independent web studio building simple, purposeful digital experiences.",
+    "5:55 AM is an independent web studio designing and building thoughtful websites for local businesses.",
+  applicationName: "5:55 AM",
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
