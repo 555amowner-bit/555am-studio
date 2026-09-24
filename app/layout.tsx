@@ -31,6 +31,9 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  verification: {
+    google: "61nL498jhN_jOBcq2wGyEb3XXtHj9_UkucaWPs3tk0I",
+  },
   openGraph: {
     title: "5:55 AM | Independent Web Studio",
     description:
