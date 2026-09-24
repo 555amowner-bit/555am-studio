@@ -1,9 +1,9 @@
 import { ServicesPage } from "@/components/services-page";
 
 export const metadata = {
-  title: "Services",
+  title: "Web Design Services",
   description:
-    "Web design and development services from 5:55 AM for local businesses.",
+    "Explore web design and development services by 5:55 AM for local businesses, from focused starter websites to custom projects and ongoing website care.",
 };
 
 export default function ServicesRoute() {
