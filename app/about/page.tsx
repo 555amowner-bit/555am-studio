@@ -1,9 +1,9 @@
 import { AboutPage } from "@/components/about-page";
 
 export const metadata = {
-  title: "About",
+  title: "About 5:55 AM",
   description:
-    "The story and thinking behind 5:55 AM, an independent web studio built by Charl.",
+    "Learn about 5:55 AM, the thinking behind the studio, and Charl's approach to building simple, purposeful websites.",
 };
 
 export default function AboutRoute() {
