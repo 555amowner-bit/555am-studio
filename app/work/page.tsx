@@ -4,6 +4,19 @@ export const metadata = {
   title: "Selected Work",
   description:
     "Explore concept web design work by 5:55 AM, an independent web studio creating thoughtful digital experiences for local businesses.",
+  openGraph: {
+    title: "Selected Work | 5:55 AM",
+    description:
+      "Explore concept web design work by 5:55 AM, an independent web studio creating thoughtful digital experiences for local businesses.",
+    url: "/work",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Selected Work | 5:55 AM",
+    description:
+      "Explore concept web design work by 5:55 AM, an independent web studio creating thoughtful digital experiences for local businesses.",
+  },
 };
 
 export default function WorkPage() {
