@@ -3,7 +3,7 @@ import { ContactForm } from "@/components/contact-form";
 export const metadata = {
   title: "Start a Project",
   description:
-    "Tell 5:55 AM what your business needs and start a conversation.",
+    "Start a website project with 5:55 AM. Tell us about your business, website needs, budget, and timeline, and we’ll take it from there.",
 };
 
 export default function ContactPage() {
