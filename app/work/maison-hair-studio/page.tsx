@@ -1,9 +1,9 @@
 import { MaisonCaseStudy } from "@/components/maison-case-study";
 
 export const metadata = {
-  title: "Maison Hair Studio",
+  title: "Maison Hair Studio | Concept",
   description:
-    "A concept website direction for a contemporary hair studio by 5:55 AM.",
+    "Explore the Maison Hair Studio concept by 5:55 AM, an editorial web direction for a contemporary hair studio focused on atmosphere, clarity, and a slower visual rhythm.",
 };
 
 export default function MaisonHairStudioPage() {
