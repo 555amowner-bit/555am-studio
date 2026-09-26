@@ -42,12 +42,21 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://555am-studio.vercel.app",
+    images: [
+      {
+        url: "/brand/logo.png",
+        width: 1774,
+        height: 887,
+        alt: "5:55 AM | Independent Web Studio",
+      },
+    ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "5:55 AM | Independent Web Studio",
     description:
       "5:55 AM is an independent web studio designing and building thoughtful websites for local businesses.",
+    images: ["/brand/logo.png"],
   },
 };
 
