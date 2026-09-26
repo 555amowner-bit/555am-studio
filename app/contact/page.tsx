@@ -4,6 +4,19 @@ export const metadata = {
   title: "Start a Project",
   description:
     "Start a website project with 5:55 AM. Tell us about your business, website needs, budget, and timeline, and we’ll take it from there.",
+  openGraph: {
+    title: "Start a Project | 5:55 AM",
+    description:
+      "Start a website project with 5:55 AM. Tell us about your business, website needs, budget, and timeline, and we’ll take it from there.",
+    url: "/contact",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Start a Project | 5:55 AM",
+    description:
+      "Start a website project with 5:55 AM. Tell us about your business, website needs, budget, and timeline, and we’ll take it from there.",
+  },
 };
 
 export default function ContactPage() {
