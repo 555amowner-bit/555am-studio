@@ -71,6 +71,20 @@ export function ContactForm() {
       return;
     }
 
+    const gtag = (
+      window as typeof window & {
+        gtag?: (
+          command: string,
+          eventName: string,
+          parameters?: Record<string, string>
+        ) => void;
+      }
+    ).gtag;
+
+    gtag?.("event", "generate_lead", {
+      lead_source: "contact_form",
+    });
+
     setIsSubmitting(true);
     setStatus("Gmail opened in a new tab.");
   }
