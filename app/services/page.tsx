@@ -1,21 +1,21 @@
 import { ServicesPage } from "@/components/services-page";
 
 export const metadata = {
-  title: "Web Design Services",
+  title: "Website UI Design Services",
   description:
-    "Explore web design and development services by 5:55 AM for local businesses, from focused starter websites to custom projects and ongoing website care.",
+    "Explore website UI design services by 5:55 AM for local businesses, from focused landing page layouts to custom interface projects and design handoff.",
   openGraph: {
-    title: "Web Design Services | 5:55 AM",
+    title: "Website UI Design Services | 5:55 AM",
     description:
-      "Explore web design and development services by 5:55 AM for local businesses, from focused starter websites to custom projects and ongoing website care.",
+      "Explore website UI design services by 5:55 AM for local businesses, from focused landing page layouts to custom interface projects and design handoff.",
     url: "/services",
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: "Web Design Services | 5:55 AM",
+    title: "Website UI Design Services | 5:55 AM",
     description:
-      "Explore web design and development services by 5:55 AM for local businesses, from focused starter websites to custom projects and ongoing website care.",
+      "Explore website UI design services by 5:55 AM for local businesses, from focused landing page layouts to custom interface projects and design handoff.",
   },
 };
 

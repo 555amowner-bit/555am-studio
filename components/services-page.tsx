@@ -6,13 +6,13 @@ const services = [
     name: "START",
     price: "From 1,500,000₫",
     description:
-      "For businesses that need a focused place to get online.",
+      "For businesses that need a focused website interface.",
     items: [
-      "Focused landing page",
-      "Responsive design",
-      "Clear call to action",
-      "Basic SEO setup",
-      "Deployment",
+      "Focused landing page UI layout",
+      "Responsive desktop, tablet, and mobile designs",
+      "Clear call to action layout",
+      "Core interface components",
+      "Design handoff",
     ],
   },
   {
@@ -20,15 +20,14 @@ const services = [
     name: "BUSINESS",
     price: "From 3,000,000₫",
     description:
-      "For businesses that need a complete, professional web presence.",
+      "For businesses that need a complete, professional website interface.",
     items: [
-      "Multi-section business website",
-      "Responsive design",
-      "Services / menu / gallery",
-      "Contact and location",
-      "Basic SEO setup",
-      "Deployment",
-      "Post-launch support",
+      "Multi-section website UI layouts",
+      "Responsive desktop, tablet, and mobile designs",
+      "Services / menu / gallery layouts",
+      "Contact and location layouts",
+      "Visual system and interface components",
+      "Design handoff",
     ],
   },
   {
@@ -36,13 +35,13 @@ const services = [
     name: "CUSTOM",
     price: "From 6,000,000₫",
     description:
-      "For businesses with specific requirements that call for a more tailored solution.",
+      "For businesses with specific requirements that call for a more tailored interface.",
     items: [
-      "Tailored design",
-      "Advanced sections or flows",
-      "Custom integrations where appropriate",
+      "Tailored website UI design",
+      "Advanced page layouts or flows",
+      "Custom interface components",
       "More complex content structures",
-      "Extended implementation scope",
+      "Detailed design handoff",
     ],
   },
 ];
@@ -63,8 +62,8 @@ export function ServicesPage() {
 
             <div className="col-span-12 lg:col-span-5 lg:col-start-8 lg:flex lg:items-end">
               <p className="text-large max-w-md text-stone">
-                From focused landing pages to fully tailored business
-                websites, we build around what your business actually needs.
+                From focused landing pages to tailored business interfaces, we
+                design around what your business actually needs.
               </p>
             </div>
           </div>
@@ -78,8 +77,8 @@ export function ServicesPage() {
               <p className="eyebrow">WHAT WE BUILD.</p>
 
               <p className="mt-6 max-w-xs text-base leading-7 text-stone">
-                Different businesses need different levels of support. The
-                scope grows with the problem, not the other way around.
+                Different businesses need different levels of design support.
+                The scope grows with the problem, not the other way around.
               </p>
             </div>
 
@@ -141,24 +140,23 @@ export function ServicesPage() {
         <div className="site-container">
           <div className="grid-12 gap-y-12">
             <div className="col-span-12 lg:col-span-4">
-              <p className="eyebrow">WEBSITE CARE</p>
+              <p className="eyebrow">DESIGN HANDOFF</p>
             </div>
 
             <div className="col-span-12 lg:col-span-7 lg:col-start-6">
               <h2 className="type-h2 max-w-[9ch]">
-                Keep it running. Keep it improving.
+                Ready for the next step.
               </h2>
 
               <p className="text-large mt-8 max-w-2xl text-stone">
-                Ongoing updates, fixes, and support after launch, so the
-                website can keep up as the business changes.
+                You receive organized website UI layouts, responsive designs,
+                visual systems, and interface components ready to share with
+                your development partner.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 border-t border-border pt-5 sm:flex-row sm:items-center sm:justify-between">
-                <span className="eyebrow">FROM 300,000₫ / MONTH</span>
-
                 <Link className="text-link" href="/contact">
-                  <span>Ask about Website Care</span>
+                  <span>Ask about design handoff</span>
                   <span aria-hidden="true" className="button-arrow">
                     →
                   </span>

@@ -54,7 +54,7 @@ export function AboutIntro() {
             <div className="mt-12 border-t border-border pt-5 sm:mt-16 sm:pt-6">
               <p className="eyebrow">Built by Charl</p>
               <p className="mt-4 max-w-[31rem] text-base leading-7 text-stone">
-                I&apos;m an independent web designer and developer building 5:55 AM around a
+                I&apos;m an independent web UI designer building 5:55 AM around a
                 simple belief: listen first, build with purpose, and keep improving.
               </p>
             </div>

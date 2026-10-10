@@ -118,7 +118,7 @@ export function AboutPage() {
 
                       <p className="mt-5 max-w-xl text-base leading-7 text-stone">
                         Start with the business, the audience, and the actual
-                        problem before deciding what needs to be built.
+                        problem before deciding what needs to be designed.
                       </p>
                     </div>
                   </div>
@@ -161,7 +161,7 @@ export function AboutPage() {
 
                       <p className="mt-5 max-w-xl text-base leading-7 text-stone">
                         Learn from the work, listen to feedback, and keep
-                        improving the experience after launch.
+                        refining the interface through feedback before handoff.
                       </p>
                     </div>
                   </div>
@@ -187,7 +187,7 @@ export function AboutPage() {
               <div className="mt-8 max-w-2xl space-y-6 text-large text-stone">
                 <p>
                   5:55 AM is an independent web studio built by Charl,
-                  bringing web design and development together in one focused
+                  focusing on thoughtful website UI design in one focused
                   practice.
                 </p>
 
