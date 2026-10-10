@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     template: "%s | 5:55 AM",
   },
   description:
-    "5:55 AM is an independent web studio designing and building thoughtful websites for local businesses.",
+    "5:55 AM is an independent web UI design studio creating thoughtful website interfaces for local businesses.",
   applicationName: "5:55 AM",
   robots: {
     index: true,
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "5:55 AM | Independent Web Studio",
     description:
-      "5:55 AM is an independent web studio designing and building thoughtful websites for local businesses.",
+      "5:55 AM is an independent web UI design studio creating thoughtful website interfaces for local businesses.",
     siteName: "5:55 AM",
     type: "website",
     locale: "en_US",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "5:55 AM | Independent Web Studio",
     description:
-      "5:55 AM is an independent web studio designing and building thoughtful websites for local businesses.",
+      "5:55 AM is an independent web UI design studio creating thoughtful website interfaces for local businesses.",
     images: ["/brand/logo.png"],
   },
 };

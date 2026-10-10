@@ -14,28 +14,28 @@ const services = [
     number: "01",
     name: "START",
     price: "From 1,500,000₫",
-    description: "For businesses that need a focused place to get online.",
+    description: "For businesses that need a focused website interface.",
     details: [
-      "Focused landing page",
-      "Responsive design",
-      "Clear call to action",
-      "Basic SEO setup",
-      "Deployment",
+      "Focused landing page UI layout",
+      "Responsive desktop, tablet, and mobile designs",
+      "Clear call to action layout",
+      "Core interface components",
+      "Design handoff",
     ],
   },
   {
     number: "02",
     name: "BUSINESS",
     price: "From 3,000,000₫",
-    description: "For businesses that need a complete, professional web presence.",
+    description:
+      "For businesses that need a complete, professional website interface.",
     details: [
-      "Multi-section business website",
-      "Responsive design",
-      "Services / menu / gallery",
-      "Contact and location",
-      "Basic SEO setup",
-      "Deployment",
-      "Post-launch support",
+      "Multi-section website UI layouts",
+      "Responsive desktop, tablet, and mobile designs",
+      "Services / menu / gallery layouts",
+      "Contact and location layouts",
+      "Visual system and interface components",
+      "Design handoff",
     ],
     featured: true,
   },
@@ -44,13 +44,13 @@ const services = [
     name: "CUSTOM",
     price: "From 6,000,000₫",
     description:
-      "For businesses with specific requirements that call for a more tailored solution.",
+      "For businesses with specific requirements that call for a more tailored interface.",
     details: [
-      "Tailored design",
-      "Advanced sections or flows",
-      "Custom integrations where appropriate",
+      "Tailored website UI design",
+      "Advanced page layouts or flows",
+      "Custom interface components",
       "More complex content structures",
-      "Extended implementation scope",
+      "Detailed design handoff",
     ],
   },
 ] satisfies readonly Service[];
@@ -72,7 +72,7 @@ export function ServicesPricing() {
               Simple solutions for real needs.
             </h2>
             <p className="mt-6 max-w-[34rem] text-base leading-7 text-stone sm:mt-7">
-              From focused landing pages to fully tailored business websites, we build
+              From focused landing pages to tailored business interfaces, we design
               around what your business actually needs.
             </p>
           </div>
@@ -128,26 +128,25 @@ export function ServicesPricing() {
         </div>
 
         <aside
-          aria-labelledby="website-care-heading"
+          aria-labelledby="design-handoff-heading"
           className="mt-16 border-y border-border sm:mt-20"
         >
           <div className="grid-12 items-start gap-y-6 py-7 sm:py-8 md:gap-y-0 md:py-9">
             <div className="col-span-12 md:col-span-4">
-              <p className="eyebrow">Website Care</p>
+              <p className="eyebrow">Design Handoff</p>
             </div>
             <div className="col-span-12 md:col-span-8 md:col-start-5">
               <div className="grid gap-5 sm:grid-cols-[1fr_auto] sm:items-start sm:gap-8">
                 <div>
-                  <h3 id="website-care-heading" className="type-h3 max-w-[14ch]">
-                    Keep it running. Keep it improving.
+                  <h3 id="design-handoff-heading" className="type-h3 max-w-[14ch]">
+                    Ready for the next step.
                   </h3>
                   <p className="mt-4 max-w-[30rem] text-base leading-7 text-stone">
-                    Ongoing updates, fixes, and support after launch.
+                    Organized UI layouts, responsive designs, visual systems,
+                    and interface components ready to share with your
+                    development partner.
                   </p>
                 </div>
-                <p className="font-sans text-lg font-medium leading-tight tracking-[-0.02em] text-ink sm:pt-1 sm:text-right">
-                  From 300,000₫ / month
-                </p>
               </div>
             </div>
           </div>

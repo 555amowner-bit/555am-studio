@@ -14,7 +14,7 @@ export function Hero() {
             </h1>
 
             <p className="text-large mt-8 max-w-[34rem] text-stone">
-              We design and build thoughtful websites for local businesses —
+              We design thoughtful website interfaces for local businesses —
               focused on what your customers actually need.
             </p>
 
