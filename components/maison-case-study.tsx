@@ -4,7 +4,7 @@ function MaisonHeroVisual() {
   return (
     <div
       aria-hidden="true"
-      className="relative overflow-hidden border border-border bg-white p-3 sm:p-4"
+      className="soft-frame relative overflow-hidden border border-border bg-white p-3 sm:p-4"
     >
       <div className="flex aspect-[1.25] flex-col border border-border bg-white">
         <div className="flex items-center justify-between border-b border-border px-4 py-3 sm:px-6 sm:py-4">
@@ -39,14 +39,10 @@ function MaisonHeroVisual() {
             </div>
           </div>
 
-          <div className="relative overflow-hidden bg-stone">
-            <div className="absolute inset-0 bg-[linear-gradient(135deg,transparent_0_48%,rgba(247,247,245,0.42)_48%_49%,transparent_49%)]" />
-
-            <div className="absolute -right-[16%] top-[8%] aspect-square w-[76%] rounded-full border-[clamp(1.25rem,3vw,3.5rem)] border-paper/80" />
-
-            <div className="absolute bottom-[10%] left-[13%] aspect-[0.68] w-[38%] bg-paper/85" />
-
-            <div className="absolute bottom-[8%] right-[11%] h-px w-[48%] bg-ink/60" />
+          <div className="project-image-maison relative overflow-hidden bg-stone">
+            <div className="absolute inset-x-[9%] bottom-[10%] border-t border-paper/70 pt-3 text-[0.56rem] font-medium uppercase tracking-[0.14em] text-paper">
+              Maison / a quieter visit
+            </div>
           </div>
         </div>
       </div>
@@ -58,7 +54,7 @@ function DirectionVisual() {
   return (
     <div
       aria-hidden="true"
-      className="relative aspect-[1.35] overflow-hidden border border-border bg-paper"
+      className="soft-frame relative aspect-[1.35] overflow-hidden border border-border bg-paper"
     >
       <div className="absolute left-[8%] top-[12%] h-px w-[84%] bg-border" />
       <div className="absolute left-[8%] top-[12%] h-[76%] w-px bg-border" />
@@ -89,10 +85,10 @@ function ExperienceVisual() {
   return (
     <div
       aria-hidden="true"
-      className="relative overflow-hidden border border-border bg-white p-3 sm:p-4"
+      className="soft-frame relative overflow-hidden border border-border bg-white p-3 sm:p-4"
     >
       <div className="grid aspect-[1.5] grid-cols-[0.72fr_1.28fr] gap-3 border border-border bg-paper p-3 sm:gap-5 sm:p-5">
-        <div className="relative overflow-hidden bg-stone">
+        <div className="project-image-maison relative overflow-hidden bg-stone">
           <div className="absolute left-[14%] top-[14%] h-px w-[62%] bg-paper/80" />
           <div className="absolute right-[13%] top-[14%] h-[45%] w-px bg-paper/80" />
 
@@ -124,13 +120,13 @@ function ExperienceVisual() {
 export function MaisonCaseStudy() {
   return (
     <>
-      <section className="border-b border-border py-24 sm:py-32 lg:py-40">
+      <section className="case-hero case-hero-maison editorial-section overflow-hidden border-b border-border bg-white/45 py-20 sm:py-28 lg:py-32">
         <div className="site-container">
           <div className="grid-12 gap-y-14">
-            <div className="col-span-12 lg:col-span-8">
+            <div className="col-span-12 lg:col-span-9">
               <p className="eyebrow">CONCEPT PROJECT</p>
 
-              <h1 className="type-display mt-6 max-w-[8ch]">
+              <h1 className="type-display case-title mt-6 max-w-[8ch]">
                 Maison Hair Studio
               </h1>
 
@@ -140,20 +136,20 @@ export function MaisonCaseStudy() {
               </div>
             </div>
 
-            <div className="col-span-12 lg:col-span-4 lg:col-start-9 lg:flex lg:items-end">
-              <p className="text-large max-w-md text-stone">
+            <div className="col-span-12 lg:col-span-3 lg:col-start-10 lg:flex lg:items-end">
+              <p className="text-large max-w-md text-stone lg:border-l lg:border-border lg:pl-5">
                 A slower kind of beautiful.
               </p>
             </div>
 
-            <div className="col-span-12 mt-4 lg:mt-8">
+            <div className="col-span-12 mt-4 lg:col-span-11 lg:col-start-2 lg:mt-12">
               <MaisonHeroVisual />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="border-b border-border py-24 sm:py-32 lg:py-40">
+      <section className="editorial-section border-b border-border py-24 sm:py-32 lg:py-40">
         <div className="site-container">
           <div className="grid-12 gap-y-16 lg:gap-y-0">
             <div className="col-span-12 lg:col-span-4">
@@ -173,8 +169,9 @@ export function MaisonCaseStudy() {
                 </p>
 
                 <p>
-                  The website direction focuses on making the studio feel
-                  considered before a visitor ever steps through the door.
+                  The opening pairs a short point of view with a restrained
+                  service path, so atmosphere and practical details share the
+                  first screen without competing.
                 </p>
               </div>
             </div>
@@ -182,15 +179,16 @@ export function MaisonCaseStudy() {
         </div>
       </section>
 
-      <section className="border-b border-border py-24 sm:py-32 lg:py-40">
+      <section className="editorial-section border-b border-border bg-paper py-24 sm:py-32 lg:py-40">
         <div className="site-container">
           <div className="grid-12 gap-y-12 lg:gap-y-0">
             <div className="col-span-12 lg:col-span-4">
               <p className="eyebrow">THE DIRECTION</p>
 
               <p className="mt-6 max-w-xs text-base leading-7 text-stone">
-                Typography, space, and contrast carry most of the visual
-                language.
+                A generous serif headline, fine navigation, and a framed
+                service image give the page its pace. The calls to action stay
+                in predictable places.
               </p>
             </div>
 
@@ -201,7 +199,7 @@ export function MaisonCaseStudy() {
         </div>
       </section>
 
-      <section className="border-b border-border py-24 sm:py-32 lg:py-40">
+      <section className="editorial-section border-b border-border py-24 sm:py-32 lg:py-40">
         <div className="site-container">
           <div className="grid-12 gap-y-12 lg:gap-y-0">
             <div className="col-span-12 lg:col-span-7">
@@ -227,7 +225,7 @@ export function MaisonCaseStudy() {
         </div>
       </section>
 
-      <section className="border-b border-border py-24 sm:py-32 lg:py-40">
+      <section className="editorial-section border-b border-border bg-white/45 py-24 sm:py-32 lg:py-40">
         <div className="site-container">
           <div className="grid-12">
             <div className="col-span-12 lg:col-span-8">
@@ -251,6 +249,10 @@ export function MaisonCaseStudy() {
                 <span aria-hidden="true" className="button-arrow">
                   ←
                 </span>
+              </Link>
+              <Link className="text-link" href="/work/noir-barber">
+                <span>Next concept: Noir Barber</span>
+                <span aria-hidden="true" className="button-arrow">→</span>
               </Link>
             </div>
           </div>
