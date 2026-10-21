@@ -6,10 +6,12 @@ const inputClassName =
   "mt-3 w-full border-b border-white/15 bg-transparent px-0 py-3 text-base text-[#f3f1ec] outline-none transition-colors placeholder:text-white/35 focus:border-[#f3f1ec]/80 focus:ring-0";
 
 const selectClassName =
-  "mt-3 w-full cursor-pointer appearance-none border-b border-white/15 bg-transparent px-0 py-3 text-base text-[#f3f1ec] outline-none transition-colors focus:border-[#f3f1ec]/80 focus:ring-0";
+  "mt-3 w-full cursor-pointer rounded-xl border border-white/12 bg-white/[0.035] px-4 py-3.5 text-base text-[#f3f1ec] outline-none transition-[border-color,background-color,box-shadow] duration-200 hover:border-white/25 hover:bg-white/[0.05] focus:border-[#f3f1ec]/60 focus:bg-white/[0.055] focus:ring-2 focus:ring-white/[0.06]";
 
 const selectStyle = {
   colorScheme: "dark" as const,
+  backgroundColor: "#111214",
+  color: "#f3f1ec",
 };
 
 export function ContactForm() {
@@ -17,6 +19,8 @@ export function ContactForm() {
   const cursorGlowRef = useRef<HTMLDivElement>(null);
   const [status, setStatus] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [budgetCurrency, setBudgetCurrency] = useState<"VND" | "USD">("VND");
+  const [budgetTier, setBudgetTier] = useState("");
 
   useEffect(() => {
     const form = formRef.current;
@@ -319,26 +323,87 @@ export function ContactForm() {
 
         <div className="mt-8 space-y-8">
           <div>
-            <label htmlFor="budget" className="text-small text-white/80">
-              Budget
-            </label>
+            <div className="flex flex-wrap items-center justify-between gap-4">
+              <label htmlFor="budget" className="text-small text-white/80">
+                Budget
+              </label>
+
+              <div
+                role="group"
+                aria-label="Budget currency"
+                className="contact-budget-currency relative inline-flex min-w-[8.5rem] items-center rounded-full border border-white/10 bg-white/[0.035] p-1"
+              >
+                <span
+                  aria-hidden="true"
+                  className="contact-budget-currency__indicator pointer-events-none absolute bottom-1 left-1 top-1 w-[calc(50%-0.25rem)] rounded-full border-2 border-[#f3f1ec] bg-[#f3f1ec] shadow-[0_1px_8px_rgba(0,0,0,0.22)]"
+                  style={{
+                    transform:
+                      budgetCurrency === "USD"
+                        ? "translateX(calc(100% + 0.25rem))"
+                        : "translateX(0)",
+                  }}
+                />
+                <button
+                  type="button"
+                  aria-pressed={budgetCurrency === "VND"}
+                  onClick={() => setBudgetCurrency("VND")}
+                  className={`relative z-10 min-h-8 flex-1 rounded-full px-3 text-xs font-medium transition-colors duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${
+                    budgetCurrency === "VND"
+                      ? "text-[#08090b]"
+                      : "text-white/50 hover:text-white/80"
+                  }`}
+                >
+                  VND ₫
+                </button>
+                <button
+                  type="button"
+                  aria-pressed={budgetCurrency === "USD"}
+                  onClick={() => setBudgetCurrency("USD")}
+                  className={`relative z-10 min-h-8 flex-1 rounded-full px-3 text-xs font-medium transition-colors duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${
+                    budgetCurrency === "USD"
+                      ? "text-[#08090b]"
+                      : "text-white/50 hover:text-white/80"
+                  }`}
+                >
+                  USD $
+                </button>
+              </div>
+            </div>
 
             <select
               id="budget"
               name="budget"
-              defaultValue=""
+              value={budgetTier}
+              onChange={(event) => setBudgetTier(event.target.value)}
               className={selectClassName}
               style={selectStyle}
             >
               <option value="" disabled>
                 Select one
               </option>
-              <option value="Under 3M">Under 3M₫</option>
-              <option value="3M–5M">3–5M₫</option>
-              <option value="5M–10M">5–10M₫</option>
-              <option value="10M+">10M₫+</option>
+              {budgetCurrency === "VND" ? (
+                <>
+                  <option value="Under 3M₫">Under 3M₫</option>
+                  <option value="3–5M₫">3–5M₫</option>
+                  <option value="5–10M₫">5–10M₫</option>
+                  <option value="10M₫+">10M₫+</option>
+                </>
+              ) : (
+                <>
+                  <option value="Under $120">Under $120</option>
+                  <option value="$120–$300">$120–$300</option>
+                  <option value="$300–$600">$300–$600</option>
+                  <option value="$600+">$600+</option>
+                </>
+              )}
               <option value="Not sure">I&apos;m not sure yet</option>
             </select>
+
+            <p className="mt-2 text-xs leading-5 text-white/35">
+              {budgetCurrency === "VND"
+                ? "Budget for clients in Vietnam."
+                : "Budget for international clients."}
+            </p>
           </div>
 
           <div>
@@ -407,6 +472,31 @@ export function ContactForm() {
       </div>
       </form>
       <style jsx global>{`
+        .contact-budget-currency__indicator {
+          transition: transform 850ms cubic-bezier(0.16, 1, 0.3, 1);
+          will-change: transform;
+          backface-visibility: hidden;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .contact-budget-currency__indicator {
+            transition: none !important;
+          }
+        }
+
+        .contact-form-card select {
+          color-scheme: dark;
+        }
+
+        .contact-form-card select option {
+          background-color: #111214;
+          color: #f3f1ec;
+        }
+
+        .contact-form-card select option:disabled {
+          color: #8b8b8b;
+        }
+
         .contact-cursor-glow {
           --cursor-x: 50vw;
           --cursor-y: 30vh;

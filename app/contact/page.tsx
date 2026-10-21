@@ -51,7 +51,9 @@ export default function ContactPage() {
 
                 <a
                   className="group mt-4 inline-flex items-center gap-2 text-sm text-[#f3f1ec] transition-colors hover:text-white/60 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
-                  href="mailto:555amowner@gmail.com"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=555amowner%40gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <span>555amowner@gmail.com</span>
                   <span
