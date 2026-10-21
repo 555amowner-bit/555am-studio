@@ -4,7 +4,7 @@ function NoirHeroVisual() {
   return (
     <div
       aria-hidden="true"
-      className="relative overflow-hidden border border-ink bg-ink p-3 text-paper sm:p-4"
+      className="soft-frame relative overflow-hidden border border-ink bg-ink p-3 text-paper sm:p-4"
     >
       <div className="flex aspect-[1.3] flex-col border border-stone/50 bg-ink">
         <div className="flex items-center justify-between border-b border-stone/50 px-4 py-3 sm:px-6 sm:py-4">
@@ -38,13 +38,8 @@ function NoirHeroVisual() {
           </div>
 
           <div className="grid min-h-0 grid-rows-[1.2fr_0.8fr] gap-3 sm:gap-5">
-            <div className="relative overflow-hidden bg-paper">
-              <div className="absolute left-[18%] top-[15%] h-px w-[62%] bg-ink" />
-              <div className="absolute left-[18%] top-[15%] h-[55%] w-px bg-ink" />
-
-              <div className="absolute bottom-[14%] right-[18%] h-[40%] w-[42%] border border-ink" />
-
-              <span className="absolute bottom-3 left-3 text-[0.5625rem] font-semibold tracking-[0.14em] text-ink sm:bottom-4 sm:left-4">
+            <div className="project-image-noir relative overflow-hidden bg-paper">
+              <span className="absolute bottom-3 left-3 border border-paper/40 bg-ink/80 px-2 py-1 text-[0.5625rem] font-semibold tracking-[0.14em] text-paper sm:bottom-4 sm:left-4">
                 01—03
               </span>
             </div>
@@ -63,7 +58,7 @@ function StructureVisual() {
   return (
     <div
       aria-hidden="true"
-      className="relative aspect-[1.25] overflow-hidden border border-ink bg-ink p-3 text-paper sm:p-4"
+      className="soft-frame relative aspect-[1.08] overflow-hidden border border-ink bg-ink p-3 text-paper sm:p-4"
     >
       <div className="absolute inset-[8%] border border-stone/50" />
 
@@ -98,7 +93,7 @@ function BookingVisual() {
   return (
     <div
       aria-hidden="true"
-      className="relative overflow-hidden border border-border bg-paper p-3 sm:p-4"
+      className="soft-frame relative overflow-hidden border border-border bg-paper p-3 sm:p-4"
     >
       <div className="grid aspect-[1.45] grid-cols-[1.15fr_0.85fr] gap-3 border border-border bg-white p-3 sm:gap-5 sm:p-5">
         <div className="flex flex-col justify-between bg-ink p-5 text-paper sm:p-8">
@@ -117,7 +112,7 @@ function BookingVisual() {
           </div>
         </div>
 
-        <div className="relative bg-white">
+        <div className="project-image-noir relative bg-white">
           <div className="absolute left-[18%] top-[14%] h-px w-[64%] bg-border" />
           <div className="absolute left-[18%] top-[14%] h-[52%] w-px bg-border" />
 
@@ -135,13 +130,13 @@ function BookingVisual() {
 export function NoirCaseStudy() {
   return (
     <>
-      <section className="border-b border-border bg-ink py-24 text-paper sm:py-32 lg:py-40">
+      <section className="case-hero case-hero-noir editorial-section overflow-hidden border-b border-border bg-ink py-20 text-paper sm:py-28 lg:py-32">
         <div className="site-container">
           <div className="grid-12 gap-y-14">
-            <div className="col-span-12 lg:col-span-8">
+            <div className="col-span-12 lg:col-span-7">
               <p className="eyebrow text-stone">CONCEPT PROJECT</p>
 
-              <h1 className="type-display !text-paper mt-6 max-w-[7ch]">
+              <h1 className="type-display case-title !text-paper mt-6 max-w-[7ch]">
                 Noir Barber
               </h1>
 
@@ -157,14 +152,14 @@ export function NoirCaseStudy() {
               </p>
             </div>
 
-            <div className="col-span-12 mt-4 lg:mt-8">
+            <div className="col-span-12 mt-4 lg:col-span-12 lg:mt-12">
               <NoirHeroVisual />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="border-b border-border py-24 sm:py-32 lg:py-40">
+      <section className="editorial-section border-b border-border py-24 sm:py-32 lg:py-40">
         <div className="site-container">
           <div className="grid-12 gap-y-16 lg:gap-y-0">
             <div className="col-span-12 lg:col-span-4">
@@ -183,8 +178,9 @@ export function NoirCaseStudy() {
                 </p>
 
                 <p>
-                  The concept treats the website as part of the ritual:
-                  focused, structured, and easy to move through.
+                  The interface uses a high contrast layout, direct section
+                  labels, and a clear booking cue. The hierarchy keeps service
+                  information easy to scan before a visitor commits.
                 </p>
               </div>
             </div>
@@ -192,15 +188,16 @@ export function NoirCaseStudy() {
         </div>
       </section>
 
-      <section className="border-b border-border bg-ink py-24 text-paper sm:py-32 lg:py-40">
+      <section className="editorial-section border-b border-border bg-ink py-24 text-paper sm:py-32 lg:py-40">
         <div className="site-container">
           <div className="grid-12 gap-y-12 lg:gap-y-0">
             <div className="col-span-12 lg:col-span-4">
               <p className="eyebrow text-stone">THE DIRECTION</p>
 
               <p className="mt-6 max-w-xs text-base leading-7 text-stone">
-                The visual language leans into contrast, strong typography,
-                and a restrained architectural grid.
+                The visual language leans into contrast and a strict grid. A
+                compact service list and a persistent booking cue bring the
+                practical decision forward.
               </p>
             </div>
 
@@ -211,7 +208,7 @@ export function NoirCaseStudy() {
         </div>
       </section>
 
-      <section className="border-b border-border py-24 sm:py-32 lg:py-40">
+      <section className="editorial-section border-b border-border bg-white/45 py-24 sm:py-32 lg:py-40">
         <div className="site-container">
           <div className="grid-12 gap-y-12 lg:gap-y-0">
             <div className="col-span-12 lg:col-span-7">
@@ -237,13 +234,13 @@ export function NoirCaseStudy() {
         </div>
       </section>
 
-      <section className="border-b border-border py-24 sm:py-32 lg:py-40">
+      <section className="editorial-section border-b border-border bg-ink py-24 text-paper sm:py-32 lg:py-40">
         <div className="site-container">
           <div className="grid-12">
             <div className="col-span-12 lg:col-span-8">
               <p className="eyebrow">WHAT WE WANTED IT TO FEEL LIKE.</p>
 
-              <h2 className="type-display mt-6 max-w-[8ch]">
+              <h2 className="type-display !text-paper mt-6 max-w-[8ch]">
                 As considered as the cut itself.
               </h2>
 
@@ -254,18 +251,22 @@ export function NoirCaseStudy() {
             </div>
 
             <div className="col-span-12 mt-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
-              <Link className="button-primary" href="/contact">
+              <Link className="button-primary !border-paper !bg-paper !text-ink" href="/contact">
                 <span>Start a project</span>
                 <span aria-hidden="true" className="button-arrow">
                   →
                 </span>
               </Link>
 
-              <Link className="text-link" href="/work">
+              <Link className="text-link !text-paper" href="/work">
                 <span>Back to work</span>
                 <span aria-hidden="true" className="button-arrow">
                   ←
                 </span>
+              </Link>
+              <Link className="text-link !text-paper" href="/work/aura-skin">
+                <span>Next concept: Aura Skin</span>
+                <span aria-hidden="true" className="button-arrow">→</span>
               </Link>
             </div>
           </div>

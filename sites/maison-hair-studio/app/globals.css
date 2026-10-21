@@ -1,0 +1,809 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap");
+
+:root {
+  --maison-paper: #f3efe8;
+  --maison-paper-soft: #ebe5da;
+  --maison-ink: #171714;
+  --maison-muted: #6e6a62;
+  --maison-line: rgba(23, 23, 20, 0.16);
+  --maison-accent: #c7b9a3;
+  --maison-dark: #20201c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--maison-paper);
+  color: var(--maison-ink);
+  font-family: "DM Sans", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: var(--maison-ink);
+  color: var(--maison-paper);
+}
+
+.maison-site {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* --------------------------------
+   HEADER
+--------------------------------- */
+
+.maison-header {
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 32px;
+  min-height: 84px;
+  padding: 0 5vw;
+  border-bottom: 1px solid var(--maison-line);
+}
+
+.maison-logo {
+  width: fit-content;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+}
+
+.maison-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.maison-nav a,
+.maison-header-cta {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.maison-nav a:hover,
+.maison-header-cta:hover {
+  opacity: 0.55;
+}
+
+.maison-header-cta {
+  justify-self: end;
+  padding-bottom: 4px;
+  border-bottom: 1px solid currentColor;
+}
+
+/* --------------------------------
+   GLOBAL TYPE
+--------------------------------- */
+
+.maison-eyebrow {
+  margin: 0;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.maison-section-label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* --------------------------------
+   HERO
+--------------------------------- */
+
+.maison-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  min-height: calc(100vh - 84px);
+}
+
+.maison-hero-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10vw 7vw 10vw 5vw;
+}
+
+.maison-hero-copy h1 {
+  max-width: 680px;
+  margin: 28px 0 30px;
+  font-family: "Instrument Serif", Georgia, serif;
+  font-size: clamp(64px, 7.5vw, 128px);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 0.9;
+}
+
+.maison-hero-description {
+  max-width: 430px;
+  margin: 0;
+  color: var(--maison-muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.maison-button {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 24px;
+  margin-top: 38px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--maison-ink);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition:
+    gap 200ms ease,
+    opacity 200ms ease;
+}
+
+.maison-button:hover {
+  gap: 34px;
+}
+
+.maison-hero-visual {
+  position: relative;
+  min-height: 680px;
+  overflow: hidden;
+  background: #c8bdad;
+}
+
+.maison-hero-image {
+  object-fit: cover;
+  object-position: center center;
+}
+
+.maison-hero-caption {
+  position: absolute;
+  z-index: 2;
+  right: 5vw;
+  bottom: 34px;
+  left: 5vw;
+  display: flex;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.17em;
+}
+
+/* --------------------------------
+   GENERIC SECTION
+--------------------------------- */
+
+.maison-section {
+  padding: 140px 5vw;
+  border-top: 1px solid var(--maison-line);
+}
+
+.maison-philosophy {
+  display: grid;
+  grid-template-columns: 0.45fr 1fr;
+  gap: 9vw;
+}
+
+.maison-philosophy-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 7vw;
+  align-items: center;
+  max-width: 1200px;
+}
+
+.maison-philosophy-visual {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  overflow: hidden;
+  background: #c8bdad;
+}
+
+.maison-philosophy-image {
+  object-fit: cover;
+  object-position: center center;
+  transition: transform 500ms ease;
+}
+
+.maison-philosophy-visual:hover .maison-philosophy-image {
+  transform: scale(1.015);
+}
+
+.maison-philosophy-caption {
+  position: absolute;
+  z-index: 2;
+  right: 24px;
+  bottom: 22px;
+  left: 24px;
+  display: flex;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+.maison-philosophy-copy {
+  max-width: 620px;
+}
+
+.maison-philosophy-content h2,
+.maison-services-content h2,
+.maison-studio-copy h2,
+.maison-visit h2,
+.maison-booking h2 {
+  margin: 26px 0 28px;
+  font-family: "Instrument Serif", Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 0.95;
+}
+
+.maison-philosophy-content h2 {
+  font-size: clamp(54px, 6vw, 96px);
+}
+
+.maison-philosophy-content > p:last-child {
+  max-width: 620px;
+  margin: 0;
+  color: var(--maison-muted);
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+/* --------------------------------
+   SERVICES
+--------------------------------- */
+
+.maison-services {
+  background: var(--maison-dark);
+  color: var(--maison-paper);
+}
+
+.maison-services .maison-section-label {
+  color: rgba(243, 239, 232, 0.55);
+}
+
+.maison-services-content {
+  display: grid;
+  grid-template-columns: 0.75fr 1fr;
+  gap: 10vw;
+  margin-top: 70px;
+}
+
+.maison-services-content h2 {
+  max-width: 660px;
+  font-size: clamp(54px, 5.6vw, 94px);
+}
+
+.maison-service-list {
+  border-top: 1px solid rgba(243, 239, 232, 0.22);
+}
+
+.maison-service-item {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr) 22px;
+  gap: 20px;
+  align-items: center;
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(243, 239, 232, 0.22);
+}
+
+.maison-service-item > span:first-child {
+  align-self: start;
+  padding-top: 5px;
+  color: rgba(243, 239, 232, 0.46);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+}
+
+.maison-service-entry {
+  display: grid;
+  grid-template-columns: 178px minmax(0, 1fr);
+  gap: 24px;
+  align-items: center;
+  min-width: 0;
+}
+
+.maison-service-media {
+  position: relative;
+  width: 178px;
+  height: 112px;
+  overflow: hidden;
+  background: #84786a;
+}
+
+.maison-service-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition:
+    transform 420ms ease,
+    filter 420ms ease;
+}
+
+.maison-service-item:hover .maison-service-image {
+  transform: scale(1.035);
+}
+
+.maison-service-copy {
+  min-width: 0;
+}
+
+.maison-service-item h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.maison-service-item p {
+  max-width: 390px;
+  margin: 0;
+  color: rgba(243, 239, 232, 0.62);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.maison-service-item > span:last-child {
+  align-self: start;
+  padding-top: 5px;
+  color: rgba(243, 239, 232, 0.68);
+  transition: transform 180ms ease;
+}
+
+.maison-service-item:hover > span:last-child {
+  transform: translate(3px, -3px);
+}
+
+/* --------------------------------
+   STUDIO
+--------------------------------- */
+
+.maison-studio {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+  gap: 8vw;
+  align-items: center;
+}
+
+.maison-studio-visual {
+  position: relative;
+  min-height: 640px;
+  overflow: hidden;
+  background: #c8bdad;
+}
+
+.maison-studio-image {
+  object-fit: cover;
+  object-position: center center;
+  transition: transform 500ms ease;
+}
+
+.maison-studio-visual:hover .maison-studio-image {
+  transform: scale(1.015);
+}
+
+.maison-studio-caption {
+  position: absolute;
+  z-index: 2;
+  right: 24px;
+  bottom: 24px;
+  left: 24px;
+  display: flex;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+.maison-studio-copy h2 {
+  font-size: clamp(54px, 5.5vw, 92px);
+}
+
+.maison-studio-copy > p:not(.maison-eyebrow) {
+  max-width: 480px;
+  margin: 0;
+  color: var(--maison-muted);
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.maison-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 40px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--maison-ink);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition:
+    gap 180ms ease,
+    opacity 180ms ease;
+}
+
+.maison-text-link:hover {
+  gap: 26px;
+  opacity: 0.6;
+}
+
+/* --------------------------------
+   VISIT
+--------------------------------- */
+
+.maison-visit {
+  background: var(--maison-paper-soft);
+}
+
+.maison-visit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10vw;
+  margin-top: 70px;
+}
+
+.maison-visit h2 {
+  max-width: 650px;
+  font-size: clamp(58px, 6.5vw, 105px);
+}
+
+.maison-visit-details {
+  align-self: end;
+}
+
+.maison-visit-details > div {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 25px;
+  padding: 21px 0;
+  border-top: 1px solid var(--maison-line);
+}
+
+.maison-visit-details > div:last-child {
+  border-bottom: 1px solid var(--maison-line);
+}
+
+.maison-detail-label {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.17em;
+}
+
+.maison-visit-details p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* --------------------------------
+   BOOKING
+--------------------------------- */
+
+.maison-booking {
+  display: flex;
+  min-height: 650px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 5vw;
+  background: var(--maison-ink);
+  color: var(--maison-paper);
+  text-align: center;
+}
+
+.maison-booking .maison-eyebrow {
+  color: rgba(243, 239, 232, 0.54);
+}
+
+.maison-booking h2 {
+  margin: 28px 0 8px;
+  font-size: clamp(64px, 8vw, 134px);
+}
+
+.maison-booking .maison-button {
+  border-color: rgba(243, 239, 232, 0.7);
+}
+
+.maison-booking .maison-button:hover {
+  opacity: 0.72;
+}
+
+/* --------------------------------
+   FOOTER
+--------------------------------- */
+
+.maison-footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 40px 5vw;
+  background: var(--maison-ink);
+  color: rgba(243, 239, 232, 0.62);
+  border-top: 1px solid rgba(243, 239, 232, 0.12);
+  font-size: 9px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.maison-footer > div {
+  display: flex;
+  gap: 20px;
+}
+
+.maison-footer .maison-logo {
+  color: var(--maison-paper);
+}
+
+/* --------------------------------
+   TABLET
+--------------------------------- */
+
+@media (max-width: 900px) {
+  .maison-header {
+    grid-template-columns: 1fr auto;
+  }
+
+  .maison-nav {
+    display: none;
+  }
+
+  .maison-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .maison-hero-copy {
+    min-height: 610px;
+    padding: 100px 7vw 90px;
+  }
+
+  .maison-hero-visual {
+    min-height: 620px;
+  }
+
+  .maison-philosophy {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .maison-philosophy-content {
+    grid-template-columns: 1fr;
+    gap: 55px;
+    max-width: none;
+  }
+
+  .maison-philosophy-visual {
+    min-height: 560px;
+  }
+
+  .maison-philosophy-copy {
+    max-width: 790px;
+  }
+
+  .maison-services-content,
+  .maison-studio,
+  .maison-visit-grid {
+    grid-template-columns: 1fr;
+    gap: 70px;
+  }
+
+  .maison-service-item {
+    grid-template-columns: 34px minmax(0, 1fr) 20px;
+  }
+
+  .maison-service-entry {
+    grid-template-columns: 160px minmax(0, 1fr);
+    gap: 22px;
+  }
+
+  .maison-service-media {
+    width: 160px;
+    height: 104px;
+  }
+
+  .maison-studio-visual {
+    min-height: 600px;
+  }
+
+  .maison-visit-details {
+    max-width: 700px;
+  }
+}
+
+/* --------------------------------
+   MOBILE
+--------------------------------- */
+
+@media (max-width: 600px) {
+  .maison-header {
+    min-height: 72px;
+    padding: 0 20px;
+  }
+
+  .maison-header-cta {
+    font-size: 9px;
+  }
+
+  .maison-hero-copy {
+    min-height: 600px;
+    padding: 80px 24px 72px;
+  }
+
+  .maison-hero-copy h1 {
+    margin-top: 22px;
+    margin-bottom: 24px;
+    font-size: clamp(60px, 17vw, 88px);
+  }
+
+  .maison-hero-description {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .maison-hero-visual {
+    min-height: 510px;
+  }
+
+  .maison-hero-image {
+    object-position: center center;
+  }
+
+  .maison-hero-caption {
+    right: 24px;
+    bottom: 22px;
+    left: 24px;
+  }
+
+  .maison-section {
+    padding: 95px 24px;
+  }
+
+  .maison-philosophy-content {
+    gap: 42px;
+  }
+
+  .maison-philosophy-visual {
+    min-height: 430px;
+  }
+
+  .maison-philosophy-image {
+    object-position: center center;
+  }
+
+  .maison-philosophy-caption {
+    right: 18px;
+    bottom: 18px;
+    left: 18px;
+  }
+
+  .maison-philosophy-content h2,
+  .maison-services-content h2,
+  .maison-studio-copy h2,
+  .maison-visit h2 {
+    font-size: clamp(50px, 15vw, 72px);
+  }
+
+  .maison-services-content {
+    margin-top: 55px;
+  }
+
+  .maison-service-item {
+    grid-template-columns: 24px minmax(0, 1fr) 16px;
+    gap: 10px;
+    align-items: start;
+    padding: 20px 0;
+  }
+
+  .maison-service-item > span:first-child {
+    padding-top: 3px;
+    font-size: 9px;
+  }
+
+  .maison-service-entry {
+    grid-template-columns: 105px minmax(0, 1fr);
+    gap: 14px;
+    align-items: center;
+  }
+
+  .maison-service-media {
+    width: 105px;
+    height: 78px;
+  }
+
+  .maison-service-item h3 {
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+
+  .maison-service-item p {
+    font-size: 11px;
+    line-height: 1.6;
+  }
+
+  .maison-service-item > span:last-child {
+    padding-top: 3px;
+    font-size: 10px;
+  }
+
+  .maison-studio-visual {
+    min-height: 470px;
+  }
+
+  .maison-studio-image {
+    object-position: center center;
+  }
+
+  .maison-studio-caption {
+    right: 18px;
+    bottom: 18px;
+    left: 18px;
+  }
+
+  .maison-visit-grid {
+    margin-top: 55px;
+  }
+
+  .maison-visit-details > div {
+    grid-template-columns: 95px 1fr;
+    gap: 16px;
+  }
+
+  .maison-booking {
+    min-height: 560px;
+    padding: 90px 24px;
+  }
+
+  .maison-booking h2 {
+    font-size: clamp(60px, 17vw, 92px);
+  }
+
+  .maison-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 24px;
+  }
+
+  .maison-footer > div {
+    flex-wrap: wrap;
+  }
+}

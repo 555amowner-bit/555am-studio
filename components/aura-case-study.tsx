@@ -4,7 +4,7 @@ function AuraHeroVisual() {
   return (
     <div
       aria-hidden="true"
-      className="relative overflow-hidden border border-border bg-white p-3 sm:p-4"
+      className="soft-frame relative overflow-hidden border border-border bg-white p-3 sm:p-4"
     >
       <div className="flex aspect-[1.3] flex-col border border-border bg-paper">
         <div className="flex items-center justify-between border-b border-border px-4 py-3 sm:px-6 sm:py-4">
@@ -20,7 +20,7 @@ function AuraHeroVisual() {
         </div>
 
         <div className="grid min-h-0 flex-1 grid-cols-[0.86fr_1.14fr] gap-3 p-3 sm:gap-5 sm:p-5">
-          <div className="relative min-h-0 overflow-hidden bg-white">
+          <div className="project-image-aura relative min-h-0 overflow-hidden bg-white">
             <div className="absolute -bottom-[23%] -left-[23%] aspect-square w-[120%] rounded-full border-[clamp(1.5rem,4vw,3.5rem)] border-paper" />
 
             <div className="absolute left-[20%] top-[14%] h-px w-[60%] bg-border" />
@@ -58,7 +58,7 @@ function BalanceVisual() {
   return (
     <div
       aria-hidden="true"
-      className="relative aspect-[1.2] overflow-hidden border border-border bg-paper"
+      className="soft-frame relative aspect-[1.2] overflow-hidden border border-border bg-paper"
     >
       <div className="absolute left-[9%] top-[11%] h-px w-[82%] bg-border" />
 
@@ -91,10 +91,10 @@ function TreatmentVisual() {
   return (
     <div
       aria-hidden="true"
-      className="relative overflow-hidden border border-border bg-white p-3 sm:p-4"
+      className="soft-frame relative overflow-hidden border border-border bg-white p-3 sm:p-4"
     >
       <div className="grid aspect-[1.45] grid-cols-[0.88fr_1.12fr] gap-3 border border-border bg-paper p-3 sm:gap-5 sm:p-5">
-        <div className="relative overflow-hidden bg-white">
+        <div className="project-image-aura relative overflow-hidden bg-white">
           <div className="absolute inset-[18%] border border-border" />
 
           <div className="absolute left-[28%] top-[28%] h-[44%] w-px bg-border" />
@@ -131,13 +131,13 @@ function TreatmentVisual() {
 export function AuraCaseStudy() {
   return (
     <>
-      <section className="border-b border-border py-24 sm:py-32 lg:py-40">
+      <section className="case-hero case-hero-aura editorial-section overflow-hidden border-b border-border bg-white/45 py-20 sm:py-28 lg:py-32">
         <div className="site-container">
           <div className="grid-12 gap-y-14">
-            <div className="col-span-12 lg:col-span-8">
+            <div className="col-span-12 lg:col-span-7 lg:col-start-6">
               <p className="eyebrow">CONCEPT PROJECT</p>
 
-              <h1 className="type-display mt-6 max-w-[7ch] text-ink">
+              <h1 className="type-display case-title mt-6 max-w-[7ch] text-ink">
                 Aura Skin
               </h1>
 
@@ -147,20 +147,20 @@ export function AuraCaseStudy() {
               </div>
             </div>
 
-            <div className="col-span-12 lg:col-span-4 lg:col-start-9 lg:flex lg:items-end">
-              <p className="text-large max-w-md text-stone">
+            <div className="col-span-12 lg:col-span-4 lg:row-start-1 lg:flex lg:items-end">
+              <p className="text-large max-w-md text-stone lg:border-l lg:border-border lg:pl-5">
                 Return to your natural rhythm.
               </p>
             </div>
 
-            <div className="col-span-12 mt-4 lg:mt-8">
+            <div className="col-span-12 mt-4 lg:col-span-10 lg:col-start-2 lg:mt-12">
               <AuraHeroVisual />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="border-b border-border py-24 sm:py-32 lg:py-40">
+      <section className="editorial-section border-b border-border py-24 sm:py-32 lg:py-40">
         <div className="site-container">
           <div className="grid-12 gap-y-16 lg:gap-y-0">
             <div className="col-span-12 lg:col-span-4">
@@ -179,8 +179,9 @@ export function AuraCaseStudy() {
                 </p>
 
                 <p>
-                  The concept avoids visual noise and focuses instead on
-                  clarity, calm, and a sense of considered care.
+                  Treatment choices are introduced with short summaries and
+                  clear next steps. The visual language stays quiet so the
+                  important information remains easy to compare.
                 </p>
               </div>
             </div>
@@ -188,15 +189,16 @@ export function AuraCaseStudy() {
         </div>
       </section>
 
-      <section className="border-b border-border bg-paper py-24 sm:py-32 lg:py-40">
+      <section className="editorial-section border-b border-border bg-paper py-24 sm:py-32 lg:py-40">
         <div className="site-container">
           <div className="grid-12 gap-y-12 lg:gap-y-0">
             <div className="col-span-12 lg:col-span-4">
               <p className="eyebrow">THE DIRECTION</p>
 
               <p className="mt-6 max-w-xs text-base leading-7 text-stone">
-                Light, proportion, and restrained forms carry the visual
-                language.
+                A generous image area sets the mood while compact treatment
+                labels and consistent section spacing make the information
+                feel easy to navigate.
               </p>
             </div>
 
@@ -207,7 +209,7 @@ export function AuraCaseStudy() {
         </div>
       </section>
 
-      <section className="border-b border-border py-24 sm:py-32 lg:py-40">
+      <section className="editorial-section border-b border-border bg-white/45 py-24 sm:py-32 lg:py-40">
         <div className="site-container">
           <div className="grid-12 gap-y-12 lg:gap-y-0">
             <div className="col-span-12 lg:col-span-7">
@@ -233,7 +235,7 @@ export function AuraCaseStudy() {
         </div>
       </section>
 
-      <section className="border-b border-border py-24 sm:py-32 lg:py-40">
+      <section className="editorial-section border-b border-border py-24 sm:py-32 lg:py-40">
         <div className="site-container">
           <div className="grid-12">
             <div className="col-span-12 lg:col-span-8">
@@ -262,6 +264,10 @@ export function AuraCaseStudy() {
                 <span aria-hidden="true" className="button-arrow">
                   ←
                 </span>
+              </Link>
+              <Link className="text-link" href="/work/maison-hair-studio">
+                <span>Back to Maison Hair Studio</span>
+                <span aria-hidden="true" className="button-arrow">→</span>
               </Link>
             </div>
           </div>
